@@ -4,7 +4,7 @@
 
 ## Introduction
 
-##### In this project I will use MySQL to explore and analyze data and provide insights for a pizzeria. The dataset provided is a free dataset that is made publicly available on Maven Analytics.
+In this project I will use MySQL to explore and analyze data than I will use Tableau to visulize the data and provide final insights for the pizzeria. The dataset provided is a free dataset that is made publicly available on Maven Analytics.
 
 ## Objective
 As a data analyst hired by a pizza company, my objective is to make data-driven decisions to enhance their overall business performance and identify trends. To achieve this, I will address the following questions and more:
