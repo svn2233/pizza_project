@@ -4,7 +4,7 @@
 
 ## Introduction
 
-##### In this project I will use MySQL to explore and analyze data and provide insights for a pizzeria. The dataset provided is a free dataset that is made publicly available on Maven Analytics.
+In this project I will use MySQL to explore and analyze data than I will use Tableau to visulize the data and provide final insights for the pizzeria. The dataset provided is a free dataset that is made publicly available on Maven Analytics.
 
 ## Objective
 As a data analyst hired by a pizza company, my objective is to make data-driven decisions to enhance their overall business performance and identify trends. To achieve this, I will address the following questions and more:
@@ -31,7 +31,7 @@ SELECT * FROM pizza_types; -- pizza type id, name of pizza, category & ingredien
 ```
 
 ### STEPS
-1. Seeing the average order value.
+#### 1. Seeing the average order value.
 ```
 SELECT EXTRACT(YEAR FROM o.date) AS year,
        ROUND(AVG(p.price * d.quantity), 2) AS avg_order_value
@@ -85,7 +85,7 @@ ORDER BY 2;
 ```
 ![](images/5.png)<!-- -->
 
-### 6. Checking how many orders each hour and converting 24 hour clock to 12 hour clock for easier readability
+### 6. Checking how many orders there are each hour and converting 24 hour clock to 12 hour clock for easier readability
 ```
 SELECT TIME_FORMAT(time, '%h %p') AS hour_of_Day, COUNT(*) AS num_orders
 FROM orders
@@ -224,11 +224,16 @@ ORDER BY FIELD(day_of_week, 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursda
 ```
 ![](images/17.png)<!-- -->
 
+*Please the Link Click Below For Dashboard*
+
+[Dashboard Link](https://public.tableau.com/views/pizza_tableau/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+
 
 ## Final Insights
 
 * Yearly Performance: The pizza store had a successful year, generating $817,860.05 in revenue from 21,350 orders and selling a total of 49,574 pizzas with an average order value was $16.82.
 * Outperforming Industry Averages: Compared to industry averages, this independently-owned pizza store is performing exceptionally well. On average, a pizza store makes around $446,000 a year, while chain pizza stores make around $765,000 a year. This pizza store's revenue is 55% higher than the average pizza store and 6% higher than the average chain pizza store, demonstrating its strong potential for growth and expansion.
+* Busiest Time of Day: Afternoon is the busiest time of day with $486,430 followed by Evening with $286,110 then Morning with $45,320.
 * Busiest Days: The busiest day of the week is Friday, with an average of 70.76 orders, followed by Sunday with an average of 50.46 orders. To increase sales on Sundays, offering specials to attract more customers during this day is recommended.
 * Busiest Months: The busiest months are July, followed by May. On the other hand, the slower months are during winter, fall, and the holiday season, with October being the slowest.
 * Peak Hours: Lunch hours from 12 pm to 1 pm are the busiest, followed by dinner time from 5 pm to 6 pm. To maximize efficiency during these peak hours, ensuring a smooth and timely delivery process is crucial.
